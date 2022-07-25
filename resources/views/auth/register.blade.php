@@ -15,12 +15,12 @@
                 <div class="mb-2">
                     <label for="name" class="mb-1 text-sm block text-gray-500 font-bold">Nombre</label>
                     <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Tu Nombre"
-                    class="border p-2 text-sm w-full rounded-lg"
-                >
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Tu Nombre"
+                        class="border p-2 text-sm w-full rounded-lg"
+                    >
                 </div>
                 
                 <div class="mb-2">
