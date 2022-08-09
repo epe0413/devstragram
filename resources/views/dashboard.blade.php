@@ -11,7 +11,7 @@
                 <img src="{{ asset('img/usuario.svg') }}" alt="Imagen Usuario"/>
             </div>
             <div class="md:w-8/12 lg:w-6/12 px-5">
-                <p class="text-gray-700">{{ auth()->user()->username }}</p>
+                <p class="text-gray-700">{{ $user->username }}</p>
             </div>
         </div>
     </div>
