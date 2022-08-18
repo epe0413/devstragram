@@ -60,6 +60,7 @@
                     <input
                         name='imagen'
                         type="hidden"
+                        value="{{old('imagen')}}"
                     />
                     @error('imagen')
                         <p class="bg-red-500 text-white my-2 text-sm p-2 rounded-lg text-center">
