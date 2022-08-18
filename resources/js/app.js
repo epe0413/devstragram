@@ -11,16 +11,8 @@ const dropzone = new Dropzone('#dropzone', {
     uploadMultiple: false
 })
 
-dropzone.on('sending', function(file, xhr, formData){
-    console.log(formData);
-})
-
 dropzone.on('success', function(file, response){
-    console.log(response);
-})
-
-dropzone.on('error', function(file, message){
-    console.log(message);
+    document.querySelector('[name="imagen"]').value =response.imagen;
 })
 
 dropzone.on('removedfile', function(){
