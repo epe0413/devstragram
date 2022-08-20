@@ -28,7 +28,8 @@
                 @auth
                     <p class="text-xl font-bold text-center mb-4">Agrega un Nuevo Comentario</p>
 
-                    <form>
+                    <form action="{{ route('comentarios.store',['post' => $post, 'user'=>$user ]) }}" method="POST">
+                        @csrf
                         <div class="mb-2">
                             <label for="Comentario" class="mb-1 text-sm block text-gray-500 font-bold">
                                 Añade un comentario
