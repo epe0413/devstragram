@@ -22,6 +22,20 @@
                 </p>
                 <p class="mt-3">{{ $post->descripcion}}</p>
             </div>
+            
+            @auth
+                @if ($post->user_id === auth()->user()->id)
+                    <form>
+                        <input
+                            type="submit"
+                            value="Eliminar Publicación"
+                            class="bg-red-500 hover:bg-red-600 p-2 rounded text-white font-bold mt-3 cursor-pointer"
+                        />
+                    </form>    
+                @endif
+                
+            @endauth
+
         </div>
         <div class="md:w-1/2 px-3">
             <div class="shadow bg-white p-3 mb-3 rounded-lg">
