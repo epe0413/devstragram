@@ -28,15 +28,21 @@
                 @auth
                     <p class="text-xl font-bold text-center mb-4">Agrega un Nuevo Comentario</p>
 
+                    @if (session('mensaje'))
+                        <div class="bg-green-500 p-2 rounded-lg text-white text-center uppercase font-bold">
+                            {{ session('mensaje')}}
+                        </div>
+                    @endif
+
                     <form action="{{ route('comentarios.store',['post' => $post, 'user'=>$user ]) }}" method="POST">
                         @csrf
                         <div class="mb-2">
-                            <label for="Comentario" class="mb-1 text-sm block text-gray-500 font-bold">
+                            <label for="comentario" class="mb-1 text-sm block text-gray-500 font-bold">
                                 Añade un comentario
                             </label>
                             <textarea
-                                id="Comentario"
-                                name="Comentario"
+                                id="comentario"
+                                name="comentario"
                                 placeholder="Agrega un comentario"
                                 class="border p-2 text-sm w-full rounded-lg @error('name')
                                 border-red-500 @enderror"
