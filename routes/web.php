@@ -8,6 +8,7 @@ use App\Http\Controllers\LogoutController;
 use PhpParser\Node\Expr\BinaryOp\LogicalOr;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\LikeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,6 @@ Route::delete('/posts/{post}',[PostController::class, 'destroy'])->name('posts.d
 Route::post('/{user:username}/posts/{post}', [ComentarioController::class, 'store'])->name('comentarios.store');
 
 Route::post('/imagenes',[ImagenController::class, 'store'])->name('imagenes.store');
+
+// Like a las fotos
+Route::post('/post/{post}/likes', [LikeController::class, 'store'])->name('posts.likes.store');
