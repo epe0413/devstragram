@@ -7,7 +7,13 @@
 @section('contenido')
     <div class="md:flex md:justify-center">
         <div class="md:w-1/2 bg-white shadow p-3">
-            <form class="mt-5 md:mt-0">
+            <form
+                class="mt-5 md:mt-0"
+                method="POST"
+                action="{{ route('perfil.store')}}"
+                enctype="multipart/form-data"
+            >
+                @csrf
                 <div class="mb-2">
                     <label for="username" class="mb-1 text-sm block text-gray-500 font-bold">
                         Username
