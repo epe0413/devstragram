@@ -10,9 +10,9 @@ class PerfilController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
-        dd('aquí se muestra el formulario');
+        return view('perfil.index');
     }
 }
