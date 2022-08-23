@@ -6,7 +6,7 @@
 
 @section('contenido')
     <div class="md:flex md:justify-center">
-        <div class="md:w-1/2 bg-white shadow p-3">
+        <div class="md:w-1/2 bg-white shadow p-3 rounded-lg">
             <form
                 class="mt-5 md:mt-0"
                 method="POST"
