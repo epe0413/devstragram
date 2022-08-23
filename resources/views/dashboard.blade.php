@@ -11,6 +11,7 @@
                 <img
                     src="{{ $user->imagen ? asset('perfiles') . '/' . $user->imagen : asset('img/usuario.svg') }}"
                     alt="Imagen Usuario"
+                    class="rounded-full"
                 />
             </div>
             <div class="md:w-8/12 lg:w-6/12 px-5 flex flex-col items-center md:justify-center md:items-start py-5 md:py-5">
@@ -41,7 +42,7 @@
                     <span class="font-normal">Siguiendo</span>
                 </p>
                 <p class="text-gray-800 text-sm mb-3 font-bold">
-                    0
+                    {{ $user->posts->count()}}
                     <span class="font-normal">Posts</span>
                 </p>
             </div>
